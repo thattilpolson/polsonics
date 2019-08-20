@@ -1,0 +1,586 @@
+/*! HTML5 Boilerplate v7.1.0 | MIT License | https://html5boilerplate.com/ */
+
+/* main.css 1.0.0 | MIT License | https://github.com/h5bp/main.css#readme */
+
+@import url("https://fonts.googleapis.com/css?family=Lexend+Deca&display=swap");
+
+@import url("https://fonts.googleapis.com/css?family=Arvo&display=swap");
+
+@font-face {
+  font-family: FuturaMaxi;
+  font-weight: bold;
+  src: url("../FuturaMaxi.otf") format("opentype");
+}
+
+/* ==========================================================================
+   Base styles: opinionated defaults
+   ========================================================================== */
+
+html {
+  color: #222;
+  height: 100%;
+  font-size: 1.1em;
+  line-height: 1.4;
+  scroll-behavior: smooth;
+}
+
+::-moz-selection {
+  background: #b3d4fc;
+  text-shadow: none;
+}
+
+::selection {
+  background: #b3d4fc;
+  text-shadow: none;
+}
+
+hr {
+  display: block;
+  height: 1px;
+  border: 0;
+  border-top: 1px solid #ccc;
+  margin: 1em 0;
+  padding: 0;
+}
+
+audio,
+canvas,
+iframe,
+img,
+svg,
+video {
+  vertical-align: middle;
+}
+
+fieldset {
+  border: 0;
+  margin: 0;
+  padding: 0;
+}
+
+textarea {
+  resize: vertical;
+}
+
+/* ==========================================================================
+   Browser Upgrade Prompt
+   ========================================================================== */
+
+.browserupgrade {
+  margin: 0.2em 0;
+  background: #ccc;
+  color: #000;
+  padding: 0.2em 0;
+}
+
+.hidden {
+  display: none !important;
+}
+
+.visuallyhidden {
+  border: 0;
+  clip: rect(0 0 0 0);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  width: 1px;
+  white-space: nowrap; /* 1 */
+}
+
+.visuallyhidden.focusable:active,
+.visuallyhidden.focusable:focus {
+  clip: auto;
+  height: auto;
+  margin: 0;
+  overflow: visible;
+  position: static;
+  width: auto;
+  white-space: inherit;
+}
+
+.invisible {
+  visibility: hidden;
+}
+
+/*
+* Clearfix: contain floats
+*
+* For modern browsers
+* 1. The space content is one way to avoid an Opera bug when the
+*    `contenteditable` attribute is included anywhere else in the document.
+*    Otherwise it causes space to appear at the top and bottom of elements
+*    that receive the `clearfix` class.
+* 2. The use of `table` rather than `block` is only necessary if using
+*    `:before` to contain the top-margins of child elements.
+*/
+
+.clearfix:before,
+.clearfix:after {
+  content: " "; /* 1 */
+  display: table; /* 2 */
+}
+
+.clearfix:after {
+  clear: both;
+}
+
+/* ==========================================================================
+   Print styles.
+   Inlined to avoid the additional HTTP request:
+   https://www.phpied.com/delay-loading-your-print-css/
+   ========================================================================== */
+
+@media print {
+  *,
+  *:before,
+  *:after {
+    background: transparent !important;
+    color: #000 !important; /* Black prints faster */
+    -webkit-box-shadow: none !important;
+    box-shadow: none !important;
+    text-shadow: none !important;
+  }
+
+  a,
+  a:visited {
+    text-decoration: underline;
+  }
+
+  a[href]:after {
+    content: " (" attr(href) ")";
+  }
+
+  abbr[title]:after {
+    content: " (" attr(title) ")";
+  }
+
+  /*
+     * Don't show links that are fragment identifiers,
+     * or use the `javascript:` pseudo protocol
+     */
+
+  a[href^="#"]:after,
+  a[href^="javascript:"]:after {
+    content: "";
+  }
+
+  pre {
+    white-space: pre-wrap !important;
+  }
+  pre,
+  blockquote {
+    border: 1px solid #999;
+    page-break-inside: avoid;
+  }
+
+  /*
+     * Printing Tables:
+     * http://css-discuss.incutio.com/wiki/Printing_Tables
+     */
+
+  thead {
+    display: table-header-group;
+  }
+
+  tr,
+  img {
+    page-break-inside: avoid;
+  }
+
+  p,
+  h2,
+  h3 {
+    orphans: 3;
+    widows: 3;
+  }
+
+  h2,
+  h3 {
+    page-break-after: avoid;
+  }
+}
+
+body {
+  height: 100%;
+  color: black;
+  font-family: "Lexend Deca", sans-serif;
+}
+
+a {
+  color: black;
+  text-decoration: none;
+}
+
+p {
+  color: #444;
+}
+
+#intro,
+#services,
+#about,
+#clients,
+#gallery,
+#contact {
+  min-height: 100vh;
+}
+
+#services,
+#about,
+#gallery,
+#contact,
+#desc {
+  padding: 3em 8em 2em 8em;
+  margin: 0 auto;
+}
+
+#intro {
+  background-image: url("../images/landing.jpeg");
+  background-color: rgba(255, 255, 255, 0.05);
+  background-blend-mode: lighten;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-attachment: fixed;
+  background-size: cover;
+}
+
+#desc {
+  height: 100px;
+  position: absolute;
+  top: 0;
+  bottom: 100px;
+  left: 0;
+  right: 0;
+  margin: auto;
+  text-align: center;
+  text-shadow: 3px 3px 5px #000;
+  color: white;
+}
+
+#about,
+#gallery,
+#about p {
+  background-color: #242424;
+  color: white;
+}
+
+#clients,
+#gallery,
+#contact {
+  text-align: center;
+}
+
+#clients {
+  padding: 3em 4em 2em 4em;
+  margin: 0 auto;
+}
+
+#video-gallery {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+h2 {
+  font-size: 3em;
+  font-weight: bold;
+  font-family: "FuturaMaxi";
+}
+
+h3 {
+  font-size: 1.8em;
+}
+
+#name {
+  font-size: 4em;
+  font-weight: bold;
+  font-family: "Arvo", sans-serif;
+}
+
+form {
+  width: 60vw;
+  margin: 0 auto;
+  text-align: left;
+}
+
+label {
+  font-weight: bold;
+}
+
+input[type="text"],
+select,
+textarea {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  margin-top: 6px;
+  margin-bottom: 16px;
+  resize: vertical;
+}
+
+input[type="submit"] {
+  background-color: #ff4700;
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+input[type="submit"]:hover {
+  background-color: black;
+}
+
+.client-img {
+  padding-right: 2em;
+  padding-bottom: 2em;
+  transition: transform 0.5s ease;
+  width: 220px;
+}
+
+.img-gallery {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  padding-bottom: 1em;
+}
+
+#client-gallery {
+  margin-top: 5em;
+}
+
+.services-img,
+.about-img {
+  display: block;
+  max-height: 20vw;
+  padding: 3em 1em;
+  transition: transform 0.5s ease;
+  filter: drop-shadow(0 0 0.2rem black);
+}
+
+.about-img {
+  max-height: 30vw;
+}
+
+.client-img:hover {
+  transform: scale(1.1);
+}
+
+.video {
+  width: 600px;
+  height: 265px;
+  margin-bottom: 1em;
+}
+
+.fa {
+  padding: 14px;
+  font-size: 27px !important;
+  width: 27px;
+  text-align: center;
+  text-decoration: none;
+  margin: 5px 2px;
+  border-radius: 50%;
+}
+
+.fa:hover {
+  opacity: 0.7;
+}
+
+.fa-facebook {
+  background: #3b5998;
+  color: white;
+}
+
+.fa-envelope {
+  background: grey;
+  color: white;
+}
+
+.tooltip {
+  position: relative;
+  display: inline-block;
+}
+
+.tooltip .tooltiptext {
+  visibility: hidden;
+  font-size: 0.9em;
+  width: 145px;
+  background-color: black;
+  color: #fff;
+  text-align: center;
+  border-radius: 6px;
+  padding: 5px 0;
+  position: absolute;
+  z-index: 1;
+  top: 100%;
+  left: 50%;
+  margin-left: -70px;
+}
+
+.tooltip:hover .tooltiptext {
+  visibility: visible;
+}
+
+.footer {
+  bottom: 0;
+  padding: 1rem;
+  background-color: #ebebeb;
+  text-align: center;
+}
+
+/* Sticky/fixed navbar */
+#navbar {
+  overflow: hidden;
+  background-color: #ff4700;
+  padding: 25px 10px;
+  transition: 0.4s;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  z-index: 99;
+}
+
+#navbar a {
+  float: left;
+  color: white;
+  text-align: center;
+  padding: 12px;
+  text-decoration: none;
+  font-size: 18px;
+  line-height: 25px;
+  border-radius: 4px;
+  font-family: "Lexend Deca", sans-serif;
+}
+
+#navbar #logo {
+  font-family: "Arvo", cursive;
+  float: left;
+  font-size: 30px;
+  font-weight: bold;
+  transition: 0.4s;
+}
+
+#navbar a:hover {
+  background-color: #ebebeb;
+  color: black;
+}
+
+#navbar-right {
+  float: right;
+}
+
+@media screen and (max-width: 1024px) {
+  #services,
+  #about,
+  #clients,
+  #gallery,
+  #contact,
+  #desc {
+    padding: 2em;
+  }
+
+  .img-gallery {
+    display: block;
+    white-space: nowrap;
+    overflow-x: auto;
+  }
+
+  .img-gallery .services-img,
+  .img-gallery .about-img {
+    display: inline-block;
+  }
+
+  .services-img,
+  .about-img {
+    width: 100%;
+    min-height: 60vw;
+    padding: 1em 1em 0 0;
+  }
+
+  #video-gallery {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  form {
+    width: 80vw;
+  }
+}
+
+@media screen and (max-width: 684px) {
+  #navbar {
+    padding: 20px 10px !important;
+  }
+
+  #navbar-right {
+    float: left;
+  }
+
+  #services,
+  #about,
+  #clients,
+  #gallery,
+  #contact,
+  #desc {
+    padding: 2em;
+  }
+
+  .video {
+    width: 80vw;
+    height: auto;
+  }
+
+  #name {
+    font-size: 2.8em;
+  }
+
+  h2 {
+    font-size: 2.3em;
+  }
+
+  h3 {
+    font-size: 1.3em;
+  }
+
+  #clients {
+    height: 50vh !important;
+    min-height: 200px;
+  }
+
+  #gallery {
+    height: 60vh !important;
+    min-height: 300px;
+  }
+
+  #client-gallery {
+    white-space: nowrap;
+    overflow-x: auto;
+    margin-top: 0;
+    padding-bottom: 2em;
+  }
+
+  #client-gallery .client-img {
+    display: inline-block;
+  }
+}
+
+@media screen and (max-width: 374px) {
+  #clients {
+    height: 60vh !important;
+    min-height: 200px;
+  }
+
+  #gallery {
+    height: 80vh !important;
+    min-height: 300px;
+  }
+
+  .optional {
+    display: none;
+  }
+}
