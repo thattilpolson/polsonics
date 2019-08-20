@@ -236,7 +236,7 @@ p {
 }
 
 #intro {
-  background-image: url("../images/landing.jpeg");
+  background-image: url("../images/landing.png");
   background-color: rgba(255, 255, 255, 0.05);
   background-blend-mode: lighten;
   background-repeat: no-repeat;
