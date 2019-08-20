@@ -9,7 +9,6 @@
       name="viewport"
       content="width=device-width, initial-scale=1.0, minimum-scale=1"
     />
-
     <link rel="manifest" href="site.webmanifest" />
     <link rel="apple-touch-icon" href="icon.png" />
     <!-- Place favicon.ico in the root directory -->
@@ -19,10 +18,8 @@
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
     />
-
     <meta name="theme-color" content="#fafafa" />
   </head>
-
   <body>
     <!--[if IE]>
       <p class="browserupgrade">
@@ -59,11 +56,28 @@
       </p>
       <p>
         <b>Interested in hiring us for your next event?</b> You can email us at
-        <span><a style="color:#FF4700" href="url">cs@polsonics.com</a></span
+        <span
+          ><a
+            style="color:#FF4700"
+            href="mailto:cs@polsonics.com"
+            target="_blank"
+            >cs@polsonics.com</a
+          ></span
         >, visit our
-        <span><a style="color:#FF4700" href="url">Facebook page</a></span
+        <span
+          ><a
+            style="color:#FF4700"
+            href="https://www.facebook.com/Polsonics/"
+            target="_blank"
+            >Facebook page</a
+          ></span
         >, or fill out the
-        <span><a style="color:#FF4700" href="url">contact form</a></span> below.
+        <span
+          ><a style="color:#FF4700" href="#contact" target="_blank"
+            >contact form</a
+          ></span
+        >
+        below.
       </p>
       <div class="img-gallery">
         <img src="images/a.png" class="services-img" alt="a" />
@@ -167,29 +181,23 @@
           <span class="tooltiptext">Facebook page</span>
         </div>
       </div>
-
       <form action="https://formspree.io/cs@polsonics.com" method="POST">
         <label for="fname"
           >First Name <span style="color:#FF4700">*</span></label
         >
         <input type="text" name="first name" required />
-
         <label for="lname"
           >Last Name <span style="color:#FF4700">*</span></label
         >
         <input type="text" name="last name" required />
-
         <label for="lname">Email <span style="color:#FF4700">*</span></label>
         <input type="text" name="email" required />
-
         <label for="lname"
           >Phone Number <span style="color:#FF4700">*</span></label
         >
         <input type="text" name="phone number" required />
-
         <label for="lname">Organization/Company </label>
         <input type="text" name="organization/company" />
-
         <label for="message"
           >Message <span style="color:#FF4700">*</span></label
         >
@@ -205,7 +213,6 @@
     <div class="footer"><b>Polsonics © 2019 </b> All Rights Reserved</div>
     <script src="js/plugins.js"></script>
     <script src="js/main.js"></script>
-
     <!-- Google Analytics: change UA-XXXXX-Y to be your site's ID. -->
     <script>
       window.ga = function() {
@@ -213,7 +220,7 @@
       };
       ga.q = [];
       ga.l = +new Date();
-      ga("create", "UA-XXXXX-Y", "auto");
+      ga("create", "UA-146045281-1", "auto");
       ga("set", "transport", "beacon");
       ga("send", "pageview");
     </script>
