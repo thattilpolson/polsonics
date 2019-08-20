@@ -555,8 +555,8 @@ input[type="submit"]:hover {
   }
 
   #gallery {
-    height: 60vh !important;
-    min-height: 300px;
+    height: 65vh !important;
+    min-height: 350px;
   }
 
   #client-gallery {
